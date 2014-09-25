@@ -12,9 +12,11 @@ get '/' do
 	erb :index
 end
 
-post '/new' do
-	name = params[:name]
-	rating = params[:own_rating]
-	own_comments = params[:own_comments]
-	
+post '/new' do	
+  TVShow.new
+  params[:name]
+  params[:own_rating]
+  params[:own_comments]	
+	redirect to('/')
 end
+
