@@ -1,0 +1,18 @@
+<h1>
+	Ironhackmbd
+</h1>
+<form action="/new" method="post">
+	Movies: <input type="text" name="movies">
+ 	Rating:<input type="text" name="rating">
+ 	Comments:<input type="text" name="comments">
+  <input type="submit">
+</form>
+
+
+<ul> 
+	<% @movies.each do |movies,rating,comments| %> 
+		<li> 
+			<%= "about the'#{movies}' with #{rating} is say: #{comments}" %> 
+		</li>
+	<% end %>
+</ul> 
