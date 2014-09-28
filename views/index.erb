@@ -1,5 +1,7 @@
+<link type="text/css" rel="stylesheet" href="stylesheet.css" />
+
 <h1>
-	Ironhackmbd
+	IRONHACKIMDB
 </h1>
 <form action="/new" method="post">
 	Names: <input type="text" name="name">
@@ -12,13 +14,12 @@
 <ul> 
 	<% @all_shows.each do |one_show| %> 
 		<li> 
+			<div id= comment>
+			<img id=pics src="<%= one_show.image_link %>" />
 			<%= "about the'#{one_show.name}' with #{one_show.own_rating} is say: #{one_show.own_comments}" %> 
+			</div>
 		</li>
 	<% end %>
 </ul> 
 
 
-
-
-
-<img src="<%= @image_link %>" />
