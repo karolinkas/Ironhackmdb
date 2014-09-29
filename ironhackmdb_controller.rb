@@ -3,6 +3,7 @@ require 'sinatra/reloader'
 require 'rubygems'
 require 'active_record'
 require 'imdb'
+require 'google-webfonts'
 
 ActiveRecord::Base.establish_connection(
   adapter: 'sqlite3',
@@ -18,13 +19,9 @@ class TVShow < ActiveRecord::Base
 
   def get_info
 
-  # 	dexter_movie = Imdb::Search.new(‘Dexter’).movies.first
-		# dexter_serie = Imdb::Serie.new(dexter_movie.id)
-
   	@movie = Imdb::Search.new(name).movies.first
   	@serie = Imdb::Serie.new(@movie.id)
-		#@image_link = @serie.poster # returns the poster URL
-
+		
   end
 
   def image_link
@@ -50,7 +47,7 @@ post '/new' do
   newshow.name = params[:name]
   newshow.own_rating = params[:own_rating]
   newshow.own_comments = params[:own_comments]	
-  p newshow.save
+  newshow.save
   p newshow.errors.full_messages
 
   # binding.pry

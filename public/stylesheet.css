@@ -3,20 +3,27 @@ body{
 	background-color: rgb(210, 210, 210);
 }
 
+#submit{ 
 
-#pics { width: 300px;
+}
+
+
+#pics { width: 280px;
 		    background-size: contain;
 		    height: auto;
-		    float: left;
+		    margin:auto;
+		    vertical-align: top;
 }
 
-div#comment { width: 300px;
-		           height: auto;
-		           float: left;
+div#comment {  width: 300px;		          
 }
 
-ul {
-	font-size: 0;
+div#comment-text {  margin-top: 7px;
+		          
+}
+
+ul{
+	width: 1400px;
 }
 
 ul li{ 
@@ -24,17 +31,22 @@ ul li{
 		list-style: none;
 		height: 200px;
 	  width: 200px;
+	  line-height: 15px;
 	  display: table-cell;
 	  font-family: Tahoma, Geneva, sans-serif;
 		font-size: 14px;
 		color: grey;
 		text-decoration: none;
 
+
 }
 
 h1{
-color: white;
-font: 32px/1 Helvetica, Arial, sans-serif;
+color: #4c31c4;
+font-family: "Londrina Outline";
+font-size: 48px;
+font-weight: bold;
+
 }
 
 

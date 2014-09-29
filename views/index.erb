@@ -1,22 +1,27 @@
+
 <link type="text/css" rel="stylesheet" href="stylesheet.css" />
+<link href="//fonts.googleapis.com/css?family=Londrina+Outline:400" rel="stylesheet" type="text/css">
+
 
 <h1>
-	IRONHACKIMDB
+	Ironhackmdb
 </h1>
 <form action="/new" method="post">
 	Names: <input type="text" name="name">
  	Rating:<input type="text" name="own_rating">
  	Comments:<input type="text" name="own_comments">
-  <input type="submit">
+  <input id=submit type="submit">
 </form>
 
 
 <ul> 
 	<% @all_shows.each do |one_show| %> 
 		<li> 
-			<div id= comment>
+			<div id=comment>
 			<img id=pics src="<%= one_show.image_link %>" />
+			<div id= comment-text>
 			<%= "about the'#{one_show.name}' with #{one_show.own_rating} is say: #{one_show.own_comments}" %> 
+			</div>
 			</div>
 		</li>
 	<% end %>
